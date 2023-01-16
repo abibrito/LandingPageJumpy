@@ -13,21 +13,12 @@ body{
 
 header{
     margin-top: 25px;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 #jumpy-title{
     display: grid;
     justify-content: center;
-    
-
-}
-
-section{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    
 }
 
 h2{
@@ -37,15 +28,41 @@ h2{
     padding-left: 0;
 }
 
-input{
+section{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.form-control{
+    padding-bottom: 5px;
+    height: auto;
+}
+
+.form-control input{
     font-size: 14px;
     color: #2D2D2D;
     padding-left: 10px;
-    margin-top: 10px;
+    margin-top: 3px;
     width: 500px;
     height: 40px;
     border-radius: 5px;
     border: 0;
+}
+
+.form-control.error span{
+    color: #E73550;
+    visibility: visible;
+    text-align: right;
+    font-size: small;
+}
+
+.form-control span{
+    visibility: hidden;
+    margin-left: 390px;
+    font-size: small;
+    color: #E73550;
 }
 
 #botao{
@@ -57,13 +74,25 @@ input{
     border-radius: 8px;
     width: 510px;
     height: 48px;
-    margin-top: 30px;
-    margin-bottom: 60px;
-    margin-left: 1px;
-    padding: 0;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 #botao:hover{
     background-color: #0b56b8;
     transition: all ease 0.3s;
 }
+
+.errorSpan{
+    font-size: small;
+    color: #E73550;
+}
+.sucessoSpan{
+    font-size: small;
+    color: #0F7B0F;
+}
+
+.remove-elemento{
+    display: none;
+}
+

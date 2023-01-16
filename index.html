@@ -1,38 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Jumpy DNC</title>
-    <link rel="stylesheet" href="stylepage.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Jumpy DNC</title>
+    <link rel="stylesheet" href="stylepage.css" />
     <script src="scriptpage.js" defer></script>
 </head>
+
 <body>
-    <header><img src="./assets/logotipo/LogoDNC.png" alt="Logotipo DNC"></header>
+    <header>
+        <img src="./assets/logotipo/LogoDNC.png" alt="Logotipo DNC" />
+    </header>
     <div id="jumpy-title">
-        <img src="./assets/logotipo/jumpyLogo.png" alt="Jumpy Logotipo">
+        <img src="./assets/logotipo/jumpyLogo.png" alt="Jumpy Logotipo" />
         <h2>Bem vindo ao Jumpy!</h2>
     </div>
     <section>
-        <form action="">
-            <label for="name">Nome Completo:</label><br>
-            <input type="text" id="name" name="name" placeholder="Nome Completo" required><br><br>
+        <form id="form">
+            <div class="form-control"">
+                <label for="name">Nome Completo:</label><br />
+                <input type="text" name="name" id="name" placeholder="Nome Completo" class="inputRequired"> <br/>
+                <span class="spanRequired">*Campo Obrigatório*</><br />
+            </div>
 
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" placeholder="email@email.com" required><br><br>
+            <div class="form-control">
+                <label for="email">E-mail:</label><br />
+                <input type="email" id="email" name="email" placeholder="email@email.com" class="inputRequired"> <br/>
+                <span class="spanRequired">*Campo Obrigatório*</span><br />
+            </div>
 
-            <label for="phone">Telefone:</label><br>
-            <input type="tel" id="phone" name="phone" pattern="([0-9]){2}[0-9]{5}[0-9]{4}" placeholder="(01)23456-7890" required><br><br>
+            <div class="form-control">
+                <label for="phone">Telefone:</label><br />
+                <input type="tel" id="phone" name="phone" placeholder="(01)23456-7890" class="inputRequired"> <br/>
+                <span class="spanRequired">*Campo Obrigatório*</span><br />
+            </div>
 
-            <label for="cpf">CPF:</label><br>
-            <input type="number_format" id="cpf" name="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" placeholder="000.000.000-00" required><br><br>
+            <div class="form-control">
+                <label for="cpf">CPF:</label><br />
+                <input type="number_format" id="cpf" name="cpf"pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"placeholder="000.000.000-00" class="inputRequired"> <br/>
+                <span class="spanRequired">*Campo Obrigatório*</span><br />
+            </div>
 
-            <label for="pass">Senha:</label><br>
-            <input type="password" id="pass" name="password" minlength="8" placeholder="******" required><br><br>
-            
-            <input id="botao" type="submit" value="Cadastrar" />
+            <div class="form-control">
+                <label for="pass">Senha:</label><br />
+                <input type="password" id="pass" name="password" minlength="8" placeholder="******" class="inputRequired"> <br/>
+                <span class="spanRequired">*Campo Obrigatório*</span><br />
+            </div>
+
+            <div >
+                <input id="botao" type="submit" value="Cadastrar" /><br />
+                <span class="errorSpan remove-elemento" id="errorSpan">*Campos Obrigatorios não Registrados!*</span>
+                <span class="sucessoSpan remove-elemento" id="sucessoSpan">Sucesso!</span>
+            </div>
         </form>
     </section>
 </body>
+
 </html>
